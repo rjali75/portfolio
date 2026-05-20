@@ -21,9 +21,3 @@ Police Poppins via Google Fonts. Logos des techs via simpleicons.org.
 ## Hébergement
 
 GitHub Pages.
-
-## À ajouter avant publication
-
-- `CV_KHALOUI_Ali.pdf` à la racine pour activer le bouton de téléchargement
-- Images de projets (à la racine également)
-- Vérifier les liens LinkedIn et GitHub dans `index.html`
