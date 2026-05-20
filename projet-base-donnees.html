@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Système de gestion centre médical - Ali Khaloui</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23667eea'/%3E%3Cstop offset='100%25' stop-color='%23764ba2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-family='Poppins,sans-serif' font-size='52' font-weight='700' text-anchor='middle' fill='white'%3EAK%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="css/project-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">AK</a>
+            <a href="index.html#projets" class="back-link">← Retour aux projets</a>
+        </div>
+    </nav>
+
+    <div class="project-hero">
+        <div class="container">
+            <span class="project-tag">SQL • Modélisation • UML • Bases de données</span>
+            <h1 class="project-hero-title">Système de gestion de centre médical</h1>
+            <p class="project-hero-subtitle">Conception et modélisation d'une base de données pour la gestion d'un centre de santé</p>
+        </div>
+    </div>
+
+    <main class="project-detail">
+        <div class="container">
+            <div class="project-content-grid">
+                <div class="project-main-content">
+                    <section class="content-section">
+                        <h2>Présentation du projet</h2>
+                        <p>
+                            Conception et implémentation d'un système de gestion de base de données pour un centre 
+                            médical, couvrant la gestion des patients, des médecins, des rendez-vous, des consultations 
+                            et des prescriptions médicales. Le projet a nécessité une analyse approfondie des besoins, 
+                            la création de modèles conceptuels et logiques, et l'implémentation SQL complète.
+                        </p>
+                        <p>
+                            Ce projet démontre une compréhension solide des principes de modélisation de données, 
+                            des formes normales, et de la conception de systèmes d'information complexes. L'accent 
+                            a été mis sur l'intégrité des données, la performance des requêtes et la sécurité des 
+                            informations médicales sensibles.
+                        </p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Objectifs du système</h2>
+                        <div class="objectives-list">
+                            <div class="objective-item">
+                                <div class="objective-number">1</div>
+                                <div class="objective-content">
+                                    <h3>Gestion des patients</h3>
+                                    <p>Enregistrement complet des informations patients (identité, coordonnées, historique médical, allergies).</p>
+                                </div>
+                            </div>
+                            <div class="objective-item">
+                                <div class="objective-number">2</div>
+                                <div class="objective-content">
+                                    <h3>Gestion du personnel médical</h3>
+                                    <p>Base de données des médecins avec spécialités, horaires, disponibilités et qualifications.</p>
+                                </div>
+                            </div>
+                            <div class="objective-item">
+                                <div class="objective-number">3</div>
+                                <div class="objective-content">
+                                    <h3>Système de rendez-vous</h3>
+                                    <p>Planification et gestion des consultations avec vérification des conflits et rappels automatiques.</p>
+                                </div>
+                            </div>
+                            <div class="objective-item">
+                                <div class="objective-number">4</div>
+                                <div class="objective-content">
+                                    <h3>Dossiers médicaux</h3>
+                                    <p>Historique complet des consultations, diagnostics, traitements et prescriptions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Modèle conceptuel (MCD)</h2>
+                        <p>
+                            Le modèle conceptuel de données a été conçu en suivant la méthode Merise, 
+                            identifiant les entités principales et leurs relations :
+                        </p>
+                        <div class="data-model">
+                            <div class="entity-block">
+                                <h3>Entités principales</h3>
+                                <div class="entities-grid">
+                                    <div class="entity-card">
+                                        <h4>Patient</h4>
+                                        <ul>
+                                            <li>ID_Patient (PK)</li>
+                                            <li>Nom, Prénom</li>
+                                            <li>Date de naissance</li>
+                                            <li>Numéro sécurité sociale</li>
+                                            <li>Coordonnées</li>
+                                            <li>Groupe sanguin</li>
+                                            <li>Allergies</li>
+                                        </ul>
+                                    </div>
+                                    <div class="entity-card">
+                                        <h4>Médecin</h4>
+                                        <ul>
+                                            <li>ID_Medecin (PK)</li>
+                                            <li>Nom, Prénom</li>
+                                            <li>Spécialité</li>
+                                            <li>Numéro RPPS</li>
+                                            <li>Coordonnées</li>
+                                            <li>Horaires</li>
+                                        </ul>
+                                    </div>
+                                    <div class="entity-card">
+                                        <h4>Rendez-vous</h4>
+                                        <ul>
+                                            <li>ID_RDV (PK)</li>
+                                            <li>Date et heure</li>
+                                            <li>Durée</li>
+                                            <li>Motif</li>
+                                            <li>Statut</li>
+                                            <li>ID_Patient (FK)</li>
+                                            <li>ID_Medecin (FK)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="entity-card">
+                                        <h4>Consultation</h4>
+                                        <ul>
+                                            <li>ID_Consultation (PK)</li>
+                                            <li>Date</li>
+                                            <li>Symptômes</li>
+                                            <li>Diagnostic</li>
+                                            <li>Observations</li>
+                                            <li>ID_RDV (FK)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="entity-card">
+                                        <h4>Prescription</h4>
+                                        <ul>
+                                            <li>ID_Prescription (PK)</li>
+                                            <li>Date</li>
+                                            <li>Médicaments</li>
+                                            <li>Posologie</li>
+                                            <li>Durée traitement</li>
+                                            <li>ID_Consultation (FK)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="entity-card">
+                                        <h4>Médicament</h4>
+                                        <ul>
+                                            <li>ID_Medicament (PK)</li>
+                                            <li>Nom commercial</li>
+                                            <li>DCI</li>
+                                            <li>Laboratoire</li>
+                                            <li>Prix</li>
+                                            <li>Remboursement</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relations-block">
+                                <h3>Relations et cardinalités</h3>
+                                <ul class="relations-list">
+                                    <li><strong>Patient ↔ Rendez-vous</strong>: Un patient peut avoir plusieurs rendez-vous (1,N)</li>
+                                    <li><strong>Médecin ↔ Rendez-vous</strong>: Un médecin peut avoir plusieurs rendez-vous (1,N)</li>
+                                    <li><strong>Rendez-vous ↔ Consultation</strong>: Un rendez-vous donne lieu à une consultation (1,1)</li>
+                                    <li><strong>Consultation ↔ Prescription</strong>: Une consultation peut générer plusieurs prescriptions (1,N)</li>
+                                    <li><strong>Prescription ↔ Médicament</strong>: Relation N-M via table association</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Modèle logique (MLD)</h2>
+                        <p>
+                            Traduction du modèle conceptuel en modèle logique relationnel avec respect 
+                            de la 3ème forme normale (3FN) :
+                        </p>
+                        <div class="logical-model">
+                            <div class="table-schema">
+                                <code>
+                                    Patient(<u>ID_Patient</u>, Nom, Prenom, DateNaissance, NumSecu, Telephone, Email, Adresse, GroupeSanguin)<br><br>
+                                    Medecin(<u>ID_Medecin</u>, Nom, Prenom, Specialite, NumRPPS, Telephone, Email)<br><br>
+                                    RendezVous(<u>ID_RDV</u>, DateHeure, Duree, Motif, Statut, #ID_Patient, #ID_Medecin)<br><br>
+                                    Consultation(<u>ID_Consultation</u>, DateConsult, Symptomes, Diagnostic, Observations, #ID_RDV)<br><br>
+                                    Prescription(<u>ID_Prescription</u>, DatePrescription, Posologie, Duree, #ID_Consultation)<br><br>
+                                    Medicament(<u>ID_Medicament</u>, NomCommercial, DCI, Laboratoire, Prix, TauxRemboursement)<br><br>
+                                    Prescrire(<u>#ID_Prescription, #ID_Medicament</u>, Quantite, Instructions)<br><br>
+                                    Allergie(<u>ID_Allergie</u>, Nom, Type, Gravite)<br><br>
+                                    PatientAllergie(<u>#ID_Patient, #ID_Allergie</u>, DateDetection)
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Implémentation SQL</h2>
+                        <div class="sql-implementation">
+                            <h3>Scripts de création</h3>
+                            <p>Création des tables avec contraintes d'intégrité :</p>
+                            <div class="code-block">
+                                <code>
+-- Table Patient<br>
+CREATE TABLE Patient (<br>
+&nbsp;&nbsp;ID_Patient INT PRIMARY KEY AUTO_INCREMENT,<br>
+&nbsp;&nbsp;Nom VARCHAR(50) NOT NULL,<br>
+&nbsp;&nbsp;Prenom VARCHAR(50) NOT NULL,<br>
+&nbsp;&nbsp;DateNaissance DATE NOT NULL,<br>
+&nbsp;&nbsp;NumSecu VARCHAR(15) UNIQUE NOT NULL,<br>
+&nbsp;&nbsp;Telephone VARCHAR(15),<br>
+&nbsp;&nbsp;Email VARCHAR(100),<br>
+&nbsp;&nbsp;Adresse TEXT,<br>
+&nbsp;&nbsp;GroupeSanguin VARCHAR(5)<br>
+);<br><br>
+
+-- Table Medecin<br>
+CREATE TABLE Medecin (<br>
+&nbsp;&nbsp;ID_Medecin INT PRIMARY KEY AUTO_INCREMENT,<br>
+&nbsp;&nbsp;Nom VARCHAR(50) NOT NULL,<br>
+&nbsp;&nbsp;Prenom VARCHAR(50) NOT NULL,<br>
+&nbsp;&nbsp;Specialite VARCHAR(50) NOT NULL,<br>
+&nbsp;&nbsp;NumRPPS VARCHAR(11) UNIQUE NOT NULL,<br>
+&nbsp;&nbsp;Telephone VARCHAR(15),<br>
+&nbsp;&nbsp;Email VARCHAR(100)<br>
+);<br><br>
+
+-- Table RendezVous<br>
+CREATE TABLE RendezVous (<br>
+&nbsp;&nbsp;ID_RDV INT PRIMARY KEY AUTO_INCREMENT,<br>
+&nbsp;&nbsp;DateHeure DATETIME NOT NULL,<br>
+&nbsp;&nbsp;Duree INT DEFAULT 30,<br>
+&nbsp;&nbsp;Motif VARCHAR(200),<br>
+&nbsp;&nbsp;Statut ENUM('Prévu', 'Confirmé', 'Annulé', 'Effectué') DEFAULT 'Prévu',<br>
+&nbsp;&nbsp;ID_Patient INT NOT NULL,<br>
+&nbsp;&nbsp;ID_Medecin INT NOT NULL,<br>
+&nbsp;&nbsp;FOREIGN KEY (ID_Patient) REFERENCES Patient(ID_Patient),<br>
+&nbsp;&nbsp;FOREIGN KEY (ID_Medecin) REFERENCES Medecin(ID_Medecin)<br>
+);
+                                </code>
+                            </div>
+
+                            <h3>Requêtes complexes</h3>
+                            <div class="queries-grid">
+                                <div class="query-example">
+                                    <h4>1. Historique patient</h4>
+                                    <p>Récupération de l'historique complet d'un patient :</p>
+                                    <code>
+SELECT p.Nom, p.Prenom, c.DateConsult, c.Diagnostic, m.Nom AS Medecin<br>
+FROM Patient p<br>
+JOIN RendezVous r ON p.ID_Patient = r.ID_Patient<br>
+JOIN Consultation c ON r.ID_RDV = c.ID_RDV<br>
+JOIN Medecin m ON r.ID_Medecin = m.ID_Medecin<br>
+WHERE p.ID_Patient = 1<br>
+ORDER BY c.DateConsult DESC;
+                                    </code>
+                                </div>
+                                <div class="query-example">
+                                    <h4>2. Disponibilités médecin</h4>
+                                    <p>Vérification des créneaux libres :</p>
+                                    <code>
+SELECT DateHeure, Duree<br>
+FROM RendezVous<br>
+WHERE ID_Medecin = 5<br>
+AND DATE(DateHeure) = '2025-01-25'<br>
+AND Statut != 'Annulé';
+                                    </code>
+                                </div>
+                                <div class="query-example">
+                                    <h4>3. Statistiques consultations</h4>
+                                    <p>Nombre de consultations par spécialité :</p>
+                                    <code>
+SELECT m.Specialite, COUNT(*) AS NbConsultations<br>
+FROM Medecin m<br>
+JOIN RendezVous r ON m.ID_Medecin = r.ID_Medecin<br>
+JOIN Consultation c ON r.ID_RDV = c.ID_RDV<br>
+WHERE YEAR(c.DateConsult) = 2024<br>
+GROUP BY m.Specialite<br>
+ORDER BY NbConsultations DESC;
+                                    </code>
+                                </div>
+                                <div class="query-example">
+                                    <h4>4. Prescriptions actives</h4>
+                                    <p>Liste des traitements en cours :</p>
+                                    <code>
+SELECT p.Nom, p.Prenom, med.NomCommercial, pr.Posologie<br>
+FROM Patient p<br>
+JOIN RendezVous r ON p.ID_Patient = r.ID_Patient<br>
+JOIN Consultation c ON r.ID_RDV = c.ID_RDV<br>
+JOIN Prescription pr ON c.ID_Consultation = pr.ID_Consultation<br>
+JOIN Prescrire ps ON pr.ID_Prescription = ps.ID_Prescription<br>
+JOIN Medicament med ON ps.ID_Medicament = med.ID_Medicament<br>
+WHERE DATEDIFF(NOW(), pr.DatePrescription) &lt;= pr.Duree;
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="content-section">
+                        <h2>Résultats</h2>
+                        <p>
+                            Le système de gestion de centre médical a été conçu avec succès, démontrant une 
+                            excellente compréhension des principes de bases de données relationnelles. La 
+                            modélisation respecte les formes normales et garantit l'intégrité des données 
+                            médicales sensibles.
+                        </p>
+                        <p>
+                            Ce projet m'a permis de maîtriser le cycle complet de conception d'une base de 
+                            données : de l'analyse des besoins à l'implémentation SQL, en passant par la 
+                            modélisation conceptuelle et logique. Les requêtes complexes développées démontrent 
+                            une bonne maîtrise du langage SQL et des jointures multiples.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">9</div>
+                                <div class="stat-label">Tables principales</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">20+</div>
+                                <div class="stat-label">Requêtes SQL</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">3FN</div>
+                                <div class="stat-label">Normalisation</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Enregistrements test</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <aside class="project-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Informations</h3>
+                        <dl class="info-list">
+                            <dt>Date</dt>
+                            <dd>2024</dd>
+                            
+                            <dt>Contexte</dt>
+                            <dd>Cours Bases de données - IUT</dd>
+                            
+                            <dt>Durée</dt>
+                            <dd>4 semaines</dd>
+                            
+                            <dt>Type</dt>
+                            <dd>Projet académique</dd>
+                        </dl>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Technologies</h3>
+                        <div class="tech-list">
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">SQL</span>
+                            <span class="tech-badge">UML</span>
+                            <span class="tech-badge">Merise</span>
+                            <span class="tech-badge">Draw.io</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Livrables</h3>
+                        <ul class="file-list">
+                            <li>Modèle conceptuel (MCD)</li>
+                            <li>Modèle logique (MLD)</li>
+                            <li>Scripts SQL complets</li>
+                            <li>Rapport d'analyse</li>
+                            <li>Jeux de données test</li>
+                            <li>Documentation technique</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card highlight">
+                        <h3>Excellence technique</h3>
+                        <p class="evaluation-text">
+                            Modélisation rigoureuse, respect des formes normales, 
+                            requêtes SQL avancées, documentation complète.
+                        </p>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="project-navigation">
+                <a href="projet-grande-muraille.html" class="nav-button">← Projet précédent</a>
+                <a href="index.html#projets" class="nav-button">Tous les projets →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Ali Khaloui. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

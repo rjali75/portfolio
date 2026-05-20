@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wall is You - Ali Khaloui</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23667eea'/%3E%3Cstop offset='100%25' stop-color='%23764ba2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-family='Poppins,sans-serif' font-size='52' font-weight='700' text-anchor='middle' fill='white'%3EAK%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="css/project-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">AK</a>
+            <a href="index.html#projets" class="back-link">← Retour aux projets</a>
+        </div>
+    </nav>
+
+    <div class="project-hero">
+        <div class="container">
+            <span class="project-tag">Python • FLTK • Jeu vidéo</span>
+            <h1 class="project-hero-title">Wall is You</h1>
+            <p class="project-hero-subtitle">Jeu de type dungeon-crawler développé en Python avec interface graphique</p>
+        </div>
+    </div>
+
+    <main class="project-detail">
+        <div class="container">
+            <div class="project-content-grid">
+                <div class="project-main-content">
+                    <section class="content-section">
+                        <h2>Présentation du projet</h2>
+                        <p>
+                            Wall is You est un jeu de type dungeon-crawler développé dans le cadre de la SAE 1.01 
+                            (Situation d'Apprentissage et d'Évaluation) à l'IUT de Marne-la-Vallée. Le projet 
+                            consiste à créer un jeu d'exploration de donjons avec une interface graphique complète, 
+                            un système de sauvegarde et des mécaniques de gameplay engageantes.
+                        </p>
+                        <p>
+                            Le joueur incarne un aventurier qui doit explorer différents donjons, combattre des 
+                            ennemis, collecter des trésors et progresser à travers des salles interconnectées. 
+                            Le jeu implémente des algorithmes de pathfinding et de génération procédurale pour 
+                            créer une expérience unique à chaque partie.
+                        </p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Fonctionnalités principales</h2>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="6" y1="12" x2="10" y2="12"></line>
+                                        <line x1="8" y1="10" x2="8" y2="14"></line>
+                                        <line x1="15" y1="13" x2="15.01" y2="13"></line>
+                                        <line x1="18" y1="11" x2="18.01" y2="11"></line>
+                                        <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                                    </svg>
+                                </div>
+                                <h3>Gameplay complet</h3>
+                                <p>Exploration de donjons avec système de combat contre des ennemis (dragons), collecte de trésors et navigation dans un labyrinthe de salles interconnectées.</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                                        <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                                        <polyline points="7 3 7 8 15 8"></polyline>
+                                    </svg>
+                                </div>
+                                <h3>Système de sauvegarde</h3>
+                                <p>Possibilité de sauvegarder et charger des parties avec horodatage, permettant de reprendre l'aventure là où on l'a laissée.</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="13.5" cy="6.5" r=".5"></circle>
+                                        <circle cx="17.5" cy="10.5" r=".5"></circle>
+                                        <circle cx="8.5" cy="7.5" r=".5"></circle>
+                                        <circle cx="6.5" cy="12.5" r=".5"></circle>
+                                        <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+                                    </svg>
+                                </div>
+                                <h3>Interface graphique</h3>
+                                <p>Interface développée avec FLTK (Python) incluant un menu principal, des graphiques pour les salles, les personnages et les ennemis.</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                                        <path d="M4 22h16"></path>
+                                        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                                        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                                    </svg>
+                                </div>
+                                <h3>Système de scores</h3>
+                                <p>Enregistrement des meilleurs scores avec classement, encourageant la rejouabilité et la compétition.</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                                        <line x1="8" y1="2" x2="8" y2="18"></line>
+                                        <line x1="16" y1="6" x2="16" y2="22"></line>
+                                    </svg>
+                                </div>
+                                <h3>Multiples donjons</h3>
+                                <p>8 donjons différents avec niveaux de difficulté variés (facile, moyen, difficile) et des configurations uniques de salles.</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="3" width="7" height="7"></rect>
+                                        <rect x="14" y="3" width="7" height="7"></rect>
+                                        <rect x="14" y="14" width="7" height="7"></rect>
+                                        <rect x="3" y="14" width="7" height="7"></rect>
+                                    </svg>
+                                </div>
+                                <h3>Pathfinding</h3>
+                                <p>Implémentation d'algorithmes de recherche de chemin pour la navigation du joueur et le comportement des ennemis.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Architecture technique</h2>
+                        <div class="tech-architecture">
+                            <div class="arch-block">
+                                <h3>modele.py</h3>
+                                <p>Contient toute la logique du jeu :</p>
+                                <ul>
+                                    <li>Gestion des donjons et des salles</li>
+                                    <li>Système de combat</li>
+                                    <li>Détection de collisions</li>
+                                    <li>Algorithmes de pathfinding</li>
+                                    <li>Logique de jeu (règles, progression)</li>
+                                </ul>
+                            </div>
+                            <div class="arch-block">
+                                <h3>interface.py</h3>
+                                <p>Gère l'affichage et les interactions :</p>
+                                <ul>
+                                    <li>Rendu graphique des salles</li>
+                                    <li>Menu principal et menus de jeu</li>
+                                    <li>Gestion des événements clavier/souris</li>
+                                    <li>Affichage du HUD (vie, score, inventaire)</li>
+                                    <li>Animations et effets visuels</li>
+                                </ul>
+                            </div>
+                            <div class="arch-block">
+                                <h3>fltk.py</h3>
+                                <p>Bibliothèque graphique FLTK :</p>
+                                <ul>
+                                    <li>Création de fenêtres</li>
+                                    <li>Dessin de formes et d'images</li>
+                                    <li>Gestion des événements</li>
+                                    <li>Utilitaires graphiques</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Structure des données</h2>
+                        <div class="data-structure">
+                            <h3>Donjons</h3>
+                            <p>Les donjons sont stockés dans des fichiers texte (.txt) qui définissent :</p>
+                            <ul>
+                                <li>La disposition des salles (matrice de connections)</li>
+                                <li>La position de départ du joueur</li>
+                                <li>L'emplacement des trésors et ennemis</li>
+                                <li>Les murs et passages entre salles</li>
+                            </ul>
+                            
+                            <h3>Sauvegardes</h3>
+                            <p>Format : <code>save_YYYYMMDD_HHMMSS.txt</code></p>
+                            <p>Contient :</p>
+                            <ul>
+                                <li>Position actuelle du joueur</li>
+                                <li>État du donjon (salles visitées, ennemis vaincus)</li>
+                                <li>Inventaire et statistiques</li>
+                                <li>Score et temps de jeu</li>
+                            </ul>
+
+                            <h3>Salles</h3>
+                            <p>Représentées par des images PNG (16 configurations possibles : 0000 à 1111)</p>
+                            <p>Chaque chiffre représente une ouverture : Nord, Sud, Est, Ouest</p>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Défis techniques rencontrés</h2>
+                        <div class="challenges-list">
+                            <div class="challenge-item">
+                                <h3>1. Algorithmes de pathfinding</h3>
+                                <p>
+                                    Implémentation d'algorithmes de recherche de chemin pour permettre au joueur 
+                                    de naviguer efficacement dans le donjon et aux ennemis de le poursuivre. 
+                                    Utilisation de structures de données appropriées pour optimiser les performances.
+                                </p>
+                            </div>
+                            <div class="challenge-item">
+                                <h3>2. Gestion de l'interface graphique</h3>
+                                <p>
+                                    Apprentissage et maîtrise de FLTK pour créer une interface fluide et responsive. 
+                                    Gestion des événements, animations et mise à jour de l'affichage en temps réel.
+                                </p>
+                            </div>
+                            <div class="challenge-item">
+                                <h3>3. Système de sauvegarde robuste</h3>
+                                <p>
+                                    Sérialisation et désérialisation de l'état complet du jeu, gestion des erreurs 
+                                    de lecture/écriture, et garantie de la cohérence des données sauvegardées.
+                                </p>
+                            </div>
+                            <div class="challenge-item">
+                                <h3>4. Architecture modulaire</h3>
+                                <p>
+                                    Séparation claire entre la logique métier (modèle) et l'interface graphique, 
+                                    permettant une maintenance facile et l'ajout de nouvelles fonctionnalités.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Résultats et apprentissages</h2>
+                        <p>
+                            Ce projet m'a permis de consolider mes compétences en Python et de découvrir 
+                            le développement de jeux vidéo. J'ai appris à structurer un projet complexe, 
+                            à gérer l'état d'une application, et à créer une expérience utilisateur engageante.
+                        </p>
+                        <p>
+                            Le code est bien commenté et documenté (rapport ODT inclus), démontrant ma capacité 
+                            à produire du code propre et maintenable. Le projet inclut également plusieurs 
+                            niveaux de difficulté et configurations de donjons, montrant une réflexion approfondie 
+                            sur le game design.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">~2400</div>
+                                <div class="stat-label">Lignes de code</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">3</div>
+                                <div class="stat-label">Modules principaux</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">8</div>
+                                <div class="stat-label">Donjons différents</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">16</div>
+                                <div class="stat-label">Types de salles</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <aside class="project-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Informations</h3>
+                        <dl class="info-list">
+                            <dt>Date</dt>
+                            <dd>Décembre 2024</dd>
+                            
+                            <dt>Contexte</dt>
+                            <dd>SAE 1.01 - IUT Marne-la-Vallée</dd>
+                            
+                            <dt>Durée</dt>
+                            <dd>6 semaines</dd>
+                            
+                            <dt>Type</dt>
+                            <dd>Projet académique individuel</dd>
+                        </dl>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Technologies</h3>
+                        <div class="tech-list">
+                            <span class="tech-badge">Python 3.13</span>
+                            <span class="tech-badge">FLTK</span>
+                            <span class="tech-badge">POO</span>
+                            <span class="tech-badge">Algorithmes</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Fichiers du projet</h3>
+                        <ul class="file-list">
+                            <li>modele.py (39 KB)</li>
+                            <li>interface.py (54 KB)</li>
+                            <li>fltk.py (24 KB)</li>
+                            <li>donjons/ (8 fichiers)</li>
+                            <li>salles_donjon/ (19 images)</li>
+                            <li>sauvegardes/</li>
+                            <li>Rapport (ODT)</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Évaluation</h3>
+                        <p class="evaluation-text">
+                            Projet validé avec succès démontrant une bonne maîtrise de Python, 
+                            de la POO et des interfaces graphiques.
+                        </p>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="project-navigation">
+                <a href="index.html#projets" class="nav-button">← Tous les projets</a>
+                <a href="projet-chateau-quest.html" class="nav-button">Projet suivant →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Ali Khaloui. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
